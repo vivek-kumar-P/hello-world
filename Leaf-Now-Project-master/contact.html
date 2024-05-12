@@ -1,87 +1,85 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanetSolve</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
-
-
 </head>
 
 <body>
-    <!--HEADER PART-->
-    <header class="header">
-        <a href="index.html" class="logo"><i class="uil uil-pagelines"></i>PlanetSolve</a>
+    <!-- HEADER PART -->
+    <header>
+        <a href="#home"><img src="images/logo-1.png" alt="" width="200"></a>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html#home">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
-                <!-- <li><a href="seedlink.html">SEEDLINK</a></li> -->
-                <li><a href="index.html#project">PROJECTS</a></li>
-
-                <li><a href="#donate">DONATE</a></li>
-                <!-- <li><a href="index.html#ourwork">OUR WORK</a></li> -->
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="htdocs/account.html" class="user"><i class="uil uil-user"></i> Login</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#donate">donate</a></li>
             </ul>
         </nav>
         <div class="fas fa-bars"></div>
     </header>
-
-    <!--Home-->
+    
+    <!-- Home -->
     <section class="home" id="home">
         <h1>WANT TO KNOW MORE?</h1>
     </section>
 
-    <!--CONTACT INFO-->
+    <!-- CONTACT INFO -->
     <section class="contact2">
         <h2>WRITE TO US AND WE SHALL GET BACK TO YOU</h2>
         <form action="contact.html" method="POST">
             <div class="content">
                 <div class="input-items">
-                    <label>Name</label>
-                    <input type="text" placeholder="Name" required>
-                    <label>Email</label>
-                    <input type="email" placeholder="Email Address" required>
-                    <label>Phone</label>
-                    <input type="phone" placeholder="Mobile Number" required><br>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required><br>
                 </div>
                 <div class="message">
-                    <label>Message</label>
-                    <input type="text" class="message2" placeholder="Message for us"><br>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="message2" placeholder="Message for us"></textarea><br>
                 </div>
                 <div class="submit">
-                    <input type="button" class="btn" value="SUBMIT">
+                    <input type="submit" class="btn" value="SUBMIT">
                 </div>
             </div>
         </form>
     </section>
 
-    <!-- Bottom Footer-->
+    <!-- Bottom Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col">
                     <h4>LeafNow</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
+                        <li><a href="#">About Us</a></li>
                         <li><a href="index.html#projects">Our Projects</a></li>
                         <li><a href="seedlink.html">SeedLink</a></li>
-                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>get help</h4>
+                    <h4>Get Help</h4>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment Options</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>online shop</h4>
+                    <h4>Online Shop</h4>
                     <ul>
                         <li><a href="#">Buy Plants</a></li>
                         <li><a href="#">Sell Plants</a></li>
@@ -89,7 +87,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>follow us</h4>
+                    <h4>Follow Us</h4>
                     <div class="social-links">
                         <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
@@ -103,3 +101,5 @@
 
     <script src="script.js"></script>
 </body>
+
+</html>
