@@ -35,11 +35,11 @@ html {
 /*header*/
 
 .heading {
+    position: relative;
+    padding-top: 400px;
     text-align: center;
     font-size: 4rem;
-    color: #555;
-    padding: 1rem;
-    padding-top: 7rem;
+    color: white;
 }
 
 .heading i {
@@ -51,7 +51,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white;
+    background: rgb(30, 29, 29);
     box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 3);
     position: sticky;
     top: 0;
@@ -63,7 +63,7 @@ header {
 }
 
 header .logo {
-    color: var(--green3);
+    color: var(--green2);
     font-size: 3rem;
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -84,7 +84,7 @@ header .navbar ul li {
 
 header .navbar ul li a {
     font-size: 1.5rem;
-    color: #666;
+    color: white;
 }
 
 header .navbar ul li a:hover {
@@ -99,7 +99,7 @@ header .fa-bars {
 }
 
 header .navbar ul li .user {
-    font: black;
+    font: var(--white);
     font-size: 1.1rem;
     font-family: 'Rubik', sans-serif;
 }
@@ -109,31 +109,17 @@ header .navbar ul li .user i {
 }
 
 
-/*btn*/
-
-.btn {
-    color: black !important;
-    border-color: black !important;
-}
-
-.btn:hover {
-    background: var(--green3) !important;
-    color: var(--mainWhite) !important;
-}
-
-
 /*Home*/
 
-.home {
-    min-height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url(images/contact-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(0.5px);
+.donate-background {
+    min-height: calc(120vh - 76px);
+    background: linear-gradient(transparent, transparent), url("../images/1.png") center/cover fixed no-repeat;
+    position: relative;
+}
+
+.donate-content {
+    color: var(--mainWhite);
+    margin-top: -4rem;
 }
 
 .home h1 {
@@ -145,58 +131,90 @@ header .navbar ul li .user i {
     font-family: 'Archivo Black', sans-serif;
 }
 
-.contact2 h2 {
-    position: relative;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 3rem;
-    color: black;
-    padding-top: 7rem;
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 400px;
-}
 
-.contact2 form .content {
-    position: relative;
-    z-index: 0;
-    min-height: 40vh;
-    background: var(--white);
-    background-size: cover;
-    background-position: center;
-    align-items: center;
+/*form*/
+
+.donate-class {
+    display: flex;
     justify-content: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    padding-left: 400px;
-    padding-right: 150px;
-}
-
-.contact2 form label {
-    font-size: 2rem;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact2 form input {
-    font-size: 1.4rem;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact2 form .content .message2 {
-    width: 60%;
-    height: 150px;
-}
-
-.contact2 form .content .submit {
-    display: flex;
-    position: relative;
     align-items: center;
-    justify-content: center;
-    padding-top: 5rem;
+    padding: 25px;
+    min-height: 100vh;
+    background: white;
+}
+
+.donate-class form {
+    padding: 20px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+
+.donate-class form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.donate-class form .row .col {
+    flex: 1 1 250px;
+}
+
+.donate-class form .row .col .title {
+    font-size: 20px;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.donate-class form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.donate-class form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.donate-class form .row .col .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.donate-class form .row .col .inputBox input:focus {
+    border: 1px solid #000;
+}
+
+.donate-class form .row .col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.donate-class form .row .col .flex .inputBox {
+    margin-top: 5px;
+}
+
+.donate-class form .row .col .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.donate-class form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: var(--green3);
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.donate-class form .submit-btn:hover {
+    background: var(--green2);
 }
 
 
@@ -217,7 +235,7 @@ ul {
 }
 
 .footer {
-    background-color: #24262b;
+    background-color: black;
     padding: 70px 0;
 }
 
@@ -240,7 +258,7 @@ ul {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: var(--green3);
+    background-color: var(--white);
     height: 2px;
     box-sizing: border-box;
     width: 50px;
